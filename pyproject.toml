@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isp-triage-assistant"
+version = "0.2.0"
+description = "AI triage assistant for ISP field-service claims: hybrid ML + hard rules + LLM pipeline (Remote / Call / Dispatch)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Gopota58", email = "studentsex@mail.ru" }]
+keywords = ["triage", "llm", "machine-learning", "isp", "field-service", "streamlit", "rag"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+    "joblib>=1.3",
+    "streamlit>=1.30",
+]
+
+[project.optional-dependencies]
+llm = ["ollama>=0.1"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+isp-triage = "isp_triage.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["isp_triage*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

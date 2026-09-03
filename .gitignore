@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# Артефакты, которые генерируются командой `train` / прогонами демо
+isp_triage/models/*.pkl
+data/audit.log
+data/feedback.csv
+data/claims_feedback.csv
+
+# Локальное/личное
+.env
+.idea/
+.vscode/
+*.docx
+MEMORY.md
