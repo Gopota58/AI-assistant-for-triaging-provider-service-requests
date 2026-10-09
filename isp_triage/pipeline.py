@@ -121,8 +121,8 @@ def _instructions_for(claim: Claim, action: int) -> List[str]:
             s.append("Попросить проверить настройки DNS на роутере.")
         if claim.ping_gateway_ms > 100:
             s.append("Спросить, не запущена ли фоновая загрузка/торрент, влияющая на скорость.")
-        if "vpn" in claim.text.lower():
-            s.append("Попросить отключить VPN и повторить проверку доступа.")
+        if "файрвол" in claim.text.lower():
+            s.append("Попросить отключить файрвол и повторить проверку доступа.")
         if "wi-fi" in claim.text.lower() or "wifi" in claim.text.lower():
             s.append("Уточнить расстояние до роутера и номер Wi-Fi канала.")
         s.append("Если удалённо не решается — назначить выезд (см. план выезда).")
