@@ -9,7 +9,7 @@ description = "AI triage assistant for ISP field-service claims: hybrid ML + har
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Gopota58", email = "studentsex@mail.ru" }]
+authors = [{ name = "Gopota58", email = "noreply@users.noreply.github.com" }]
 keywords = ["triage", "llm", "machine-learning", "isp", "field-service", "streamlit", "rag"]
 classifiers = [
     "Programming Language :: Python :: 3",
