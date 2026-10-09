@@ -120,7 +120,7 @@ def _instructions_for(claim: Claim, action: int) -> List[str]:
         if claim.dns_status == 0:
             s.append("Попросить проверить настройки DNS на роутере.")
         if claim.ping_gateway_ms > 100:
-            s.append("Спросить, не запущена ли фоновая загрузка/торрент, влияющая на скорость.")
+            s.append("Спросить, не запущена ли фоновая загрузка, влияющая на скорость.")
         if "файрвол" in claim.text.lower():
             s.append("Попросить отключить файрвол и повторить проверку доступа.")
         if "wi-fi" in claim.text.lower() or "wifi" in claim.text.lower():
